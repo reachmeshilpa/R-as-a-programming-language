@@ -1,0 +1,206 @@
+#Hands-on: R
+#To assign a value to a variable: us = or <-
+x = 11
+  #x is the variable and 11 is the stored value
+  #to print the value of a variable either use
+    print(x)
+    x
+  # R is case sensitive
+  print (X) #will give an error as you assigned smallcase 'x' as a variable
+y <- 12
+
+#A variable stores the values temporarily
+y=12.5
+print (y) 
+#gives the result as 12.5 not 12
+
+#To know the variables stored in the workspace memory
+ls()
+#it will print "x","y"
+
+#To remove the variables from the workspace memory
+rm(y)
+
+y=9
+
+#Assigning a variable name, can include dot, alphabet and numbers
+x.1 = 14
+#but only alphabet and dot can be at the beginning of a variable name
+#number cannot be at the beginning of a variable name
+
+#to assign character values to a variable use " " quotation marks
+xx = 'shilpa'
+#xx gives "shilpa"
+
+#whatever is inside the quotation marks will be treated as a character and not a number
+#so arithematic operations cannot be performed for the values in quotation marks
+
+#How to perform arithematic operations
+11+14
+#gives 25
+
+7*9
+#gives 63
+
+x+y
+gives 20
+
+#To store the value after performing an operation, one can assign another variable
+z = x+y
+z gives 20
+
+x+y # adding
+x-y #subtracting
+x*y #multiplying 
+x/y #dividing 
+y^2 #squaring
+sqrt(y) #square root of y
+log(y) #natural log 
+exp(y) #exponent of y 
+log2(y) #log base 2
+abs(-14) #absolute value
+
+#NOTE1
+sqrt(y
++
+#when we give an incomplete command, r shows +
++)
+#once we close the command, r will show the result as 3
+
+#NOTE2
+#Arrow key up, helps to show the previous command entered
+#and similarly arrow key down will help
+
+x =11
+x
+
+#Creating a vector which is a column of numbers
+x1 = c(1,3,5,7,9)
+x1
+
+#
+gender = c("male","female")
+gender
+
+#Creating a sequence using colon
+2:7
+[1] 2 3 4 5 6 7 
+
+seq(from=1, to=7, by=1)
+[1] 1 2 3 4 5 6 7 
+
+seq(from=1, to=7, by=1/3)
+[1] 1.000000 1.333333 1.666667 2.000000 2.333333
+[6] 2.666667 3.000000 3.333333 3.666667 4.000000
+[11] 4.333333 4.666667 5.000000 5.333333 5.666667
+[16] 6.000000 6.333333 6.666667 7.000000
+
+rep(1,times=10)
+ [1] 1 1 1 1 1 1 1 1 1 1
+ 
+ rep("shilpa",times=5)
+[1] "shilpa" "shilpa" "shilpa" "shilpa" "shilpa"
+
+1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3
+> rep(1:3, times=5)
+ [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3
+> rep(seq(from = 2, to =5, by=0.25), times=5)
+ [1] 2.00 2.25 2.50 2.75 3.00 3.25 3.50 3.75 4.00
+[10] 4.25 4.50 4.75 5.00 2.00 2.25 2.50 2.75 3.00
+[19] 3.25 3.50 3.75 4.00 4.25 4.50 4.75 5.00 2.00
+[28] 2.25 2.50 2.75 3.00 3.25 3.50 3.75 4.00 4.25
+[37] 4.50 4.75 5.00 2.00 2.25 2.50 2.75 3.00 3.25
+[46] 3.50 3.75 4.00 4.25 4.50 4.75 5.00 2.00 2.25
+[55] 2.50 2.75 3.00 3.25 3.50 3.75 4.00 4.25 4.50
+[64] 4.75 5.00
+
+rep(c(from ='m','f'), times=5)
+from      from      from      from      from      
+ "m"  "f"  "m"  "f"  "m"  "f"  "m"  "f"  "m"  "f" 
+ 
+  y = c(1,3,5,7,9)
+> y
+[1] 1 3 5 7 9
+
+#to add 10 to every element of vector x
+x=1:5
+> x
+[1] 1 2 3 4 5
+> x+10
+[1] 11 12 13 14 15
+
+#if two vectors are of the same length, we may add, subtract, 
+#multiply or divide the correspoding elements
+x+y
+[1]  2  5  8 11 14
+> y
+[1] 1 3 5 7 9
+
+#to extract the third element from the vector y
+> y[3]
+[1] 5
+
+#to extract all the elements except the third element from the vector y
+y[-3]
+[1] 1 3 7 9
+
+#to extract the first three elements
+y[1:3]
+[1] 1 3 5
+
+#To extract the first and the fifth element
+y[c(1,5)]
+[1] 1 9
+
+#To extract all the elements except the first and the fifth element
+y[-c(1,5)]
+[1] 3 5 7
+
+#To extract the elements less than 6
+ y[y<6]
+[1] 1 3 5
+
+#To create a matrix of three rows (nrow=3) and orint by three rows(true)
+
+matrix(c(1,2,3,4,5,6,7,8,9), nrow=3, byrow=TRUE)
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+
+#to enter elements by column
+matrix(c(1,2,3,4,5,6,7,8,9), nrow=3, byrow=FALSE)
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+#to store the matrix, create a variable
+mat = matrix(c(1,2,3,4,5,6,7,8,9), nrow=3, byrow=TRUE)
+> mat
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+
+#To extract elements from a matrix, row 1 column 2
+mat[1,2]
+[1] 2
+
+#To extract multiple elements from a matrix, from row 1 and 3 column 2
+> mat[c(1,3), 2]
+[1] 2 8
+
+#To extract row 2 all columns
+mat[2,]
+4 5 6
+
+#To extract all rows and column 1
+mat[,1]
+
+We can perform arithematic operations on the elements of a matrix
+mat*10
+     [,1] [,2] [,3]
+[1,]   10   20   30
+[2,]   40   50   60
+[3,]   70   80   90
